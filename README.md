@@ -1,59 +1,60 @@
-# BlogNews
+# 📰 Blog News
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+Este projeto foi desenvolvido como parte dos estudos sobre Angular realizados na plataforma [DIO - Digital Innovation One](https://www.dio.me/).  
+O **Blog News** é uma aplicação web que consome a [News API](https://www.thenewsapi.com/) para exibir notícias recentes, além de permitir visualizar detalhes e acessar notícias similares.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologias Utilizadas
+
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Thenewsapi](https://www.thenewsapi.com/)
+
+---
+
+## Funcionalidades
+
+- Listagem de notícias com paginação
+- Exibição de detalhes da notícia selecionada
+- Visualização de notícias similares
+- Página de sobre explicando o projeto
+- Página de contato com links para e-mail, LinkedIn e GitHub
+- Spinner de carregamento e mensagens de erro
+- Responsividade com Bootstrap
+
+---
+
+## Como executar o projeto
+
+1. Clone o repositório:
+```bash
+
+git clone https://github.com/SeuUsuario/blog-news.git
+
+```
+2. Instale as dependências:
 
 ```bash
+
+npm install
+
+```
+
+3. Inicie o servidor:
+
+```bash
+
 ng serve
+
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Acesse o app em http://localhost:4200.
 
-## Code scaffolding
+## Observações
+Para o funcionamento correto, é necessário utilizar uma chave de API da TheNewsAPI.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+O projeto está em constante aprendizado e pode evoluir com novas funcionalidades.
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
