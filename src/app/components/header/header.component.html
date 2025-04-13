@@ -1,1 +1,12 @@
-<p>header works!</p>
+<header>
+  <nav>
+    <div>
+      <a routerLink="/">📰 NewsBlog</a>
+    </div>
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Início</a></li>
+      <li><a routerLink="/sobre">Sobre</a></li>
+      <li><a routerLink="/contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>

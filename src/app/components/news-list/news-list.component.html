@@ -1,1 +1,5 @@
-<p>news-list works!</p>
+<div *ngFor="let noticia of noticias$">
+  <app-news-card [noticia]="noticia"></app-news-card>
+</div>
+
+<app-news-card></app-news-card>

@@ -1,1 +1,8 @@
-<p>news-detail works!</p>
+<div>
+  <app-news-card [noticia]="noticia"></app-news-card>
+  <div *ngFor="let similar of similarNews">
+    <app-news-card [noticia]="similar"></app-news-card>
+  </div>
+</div>
+
+

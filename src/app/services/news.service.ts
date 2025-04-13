@@ -12,10 +12,13 @@ export class NewsService {
 
   constructor(private http: HttpClient) { }
 
-  getNews(): Observable<NewsArticle[]> {
-    return this.http.get<NewsArticle[]>(this.apiUrl, {
+  getNews(): Observable<any> {
+    return this.http.get<any>(this.apiUrl, {
       params: {
-        locale: 'br'
+        locale: 'br',
+        language: 'pt, en',
+        limit: 5,
+        api_token: environment.api_token
       }
     });
   }

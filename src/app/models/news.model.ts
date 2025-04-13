@@ -11,4 +11,5 @@ export interface NewsArticle {
   source: string;
   categories: string[];
   relevance_score?: null | number;
+  similar?: NewsArticle[];
 }
