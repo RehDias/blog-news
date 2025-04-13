@@ -1,16 +1,23 @@
-<div>
-  <h2>{{ noticia?.title }}</h2>
-  <img src={{ noticia?.image_url }} alt="imagem da noticia" />
-  <p>{{ noticia?.description }}</p>
-  <p>publicação realizada no dia {{ noticia?.published_at | date: 'dd/MM/yyyy' }}</p>
-  <p>{{ noticia?.snippet }}</p>
-  <p>Fonte: {{ noticia?.source }}</p>
-  <p>Categorias: 
-    <span *ngFor="let cat of noticia?.categories; let last = last">
-      {{ cat }}<span *ngIf="!last">, </span>
-    </span>
-  </p>
-  <p *ngIf="!isContentPage">
-    <a [routerLink]="['/conteudo', noticia?.uuid]">noticias similares</a>
-  </p>
+<div class="card h-100 shadow-sm">
+  <img [src]="noticia?.image_url" alt="Imagem da notícia" class="card-img-top img-fluid" *ngIf="noticia?.image_url">
+
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{ noticia?.title }}</h5>
+    <p class="card-text">{{ noticia?.description }}</p>
+    <p class="text-muted">Publicado em: {{ noticia?.published_at | date: 'dd/MM/yyyy' }}</p>
+    <p>{{ noticia?.snippet }}</p>
+    <p><strong>Fonte:</strong> {{ noticia?.source }}</p>
+
+    <p><strong>Categorias:</strong>
+      <span *ngFor="let cat of noticia?.categories; let last = last">
+        {{ cat }}<span *ngIf="!last">, </span>
+      </span>
+    </p>
+
+    <p><a class="btn btn-link p-0" [href]="noticia?.url" target="_blank">Notícia completa</a></p>
+
+    <div *ngIf="!isContentPage" class="mt-auto">
+      <a class="btn btn-primary btn-sm mt-2" [routerLink]="['/conteudo', noticia?.uuid]">Ver notícias similares</a>
+    </div>
+  </div>
 </div>

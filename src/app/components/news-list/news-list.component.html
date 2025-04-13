@@ -1,5 +1,13 @@
-<div *ngFor="let noticia of noticias$">
-  <app-news-card [noticia]="noticia"></app-news-card>
-</div>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let noticia of noticias$">
+      <app-news-card [noticia]="noticia"></app-news-card>
+    </div>
+  </div>
 
-<app-news-card></app-news-card>
+  <div class="pagination mt-4 d-flex justify-content-center gap-3">
+    <button class="btn btn-outline-primary" (click)="prevPage()" [disabled]="currentPage === 1">Anterior</button>
+    <span class="align-self-center">Página {{ currentPage }}</span>
+    <button class="btn btn-outline-primary" (click)="nextPage()">Próxima</button>
+  </div>
+</div>
